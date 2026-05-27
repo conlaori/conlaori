@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capy Insurance — Orianna</title>
+  <link rel="icon" type="image/png" href="RECURSOS/FAVICON/Recurso 39.png">
+  <link rel="stylesheet" href="responsive.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+
+    @font-face {
+      font-family: 'AlteHaasGrotesk';
+      src: url('RECURSOS/fonts/alte_haas_grotesk/AlteHaasGroteskRegular.ttf') format('truetype');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'AlteHaasGrotesk';
+      src: url('RECURSOS/fonts/alte_haas_grotesk/AlteHaasGroteskBold.ttf') format('truetype');
+      font-weight: 700; font-style: normal;
+    }
+    @font-face {
+      font-family: 'BehindTheNineties';
+      src: url('RECURSOS/fonts/behind-the-nineties-90s-80s-perfectly-retro-2024-12-16-06-34-55-utc/TTF/UPRIGHT/Behind-The-Nineties-Rg.ttf') format('truetype');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'BehindTheNineties';
+      src: url('RECURSOS/fonts/behind-the-nineties-90s-80s-perfectly-retro-2024-12-16-06-34-55-utc/TTF/ITALIC/Behind-The-Nineties-It.ttf') format('truetype');
+      font-weight: 400; font-style: italic;
+    }
+
+    nav a { transition: opacity 0.2s ease; }
+    nav a:hover { opacity: 0.5; }
+    .btn-sig { transition: transform 0.35s ease; }
+    .btn-sig:hover { transform: scale(1.04); }
+    footer a { letter-spacing: -0.04em; transition: opacity 0.2s ease; }
+    footer a:hover { opacity: 0.5; }
+
+  </style>
+</head>
+<body style="background-color: #f8f6e9; margin: 0; padding: 0; overflow-x: hidden; cursor: url('cursor.png'), auto;">
+
+  <!-- NAV -->
+  <nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.5rem 2.75rem; display: flex; align-items: center; justify-content: space-between; background-color: #f8f6e9;">
+    <a href="index.html">
+      <img src="RECURSOS/img/icono-rojo.png" alt="Orianna" style="height: 2.8rem; width: auto;">
+    </a>
+    <div class="nav-links" style="display: flex; align-items: center; gap: 2.75rem;">
+      <a href="proyectos.html" style="font-family: 'BehindTheNineties', serif; font-size: 1.125rem; font-style: italic; color: #262626; text-decoration: none; font-weight: 400;">Proyectos</a>
+      <a href="sobre-mi.html" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.125rem; color: #262626; text-decoration: none; font-weight: 400;">Sobre mí</a>
+      <a href="contacto.html" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.125rem; color: #262626; text-decoration: none; font-weight: 400;">Hablemos</a>
+    </div>
+    <button class="nav-burger" aria-label="Menú" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="proyectos.html" class="nav-active">Proyectos</a>
+    <a href="sobre-mi.html">Sobre mí</a>
+    <a href="contacto.html">Hablemos</a>
+  </div>
+
+  <!-- HEADER -->
+  <section class="page-header" style="position: relative; background: #f8f6e9; display: flex; align-items: flex-start; padding-left: 20vw; padding-right: 5vw; padding-top: 10vw; padding-bottom: 4vw; overflow: hidden; margin-top: 5rem;">
+
+    <!-- Título -->
+    <div class="page-header-title" style="min-width: 28vw; flex-shrink: 0;">
+      <h1 style="font-family: 'BehindTheNineties', serif; font-size: 5vw; font-weight: 400; font-style: normal; color: #262626; margin: 0; line-height: 0.95;">Capy<br>Insurance</h1>
+    </div>
+
+    <!-- Tags + descripción -->
+    <div style="display: flex; flex-direction: column; gap: 0.9rem;">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 0.8rem; color: #262626; border: 1px solid #262626; border-radius: 100px; padding: 0.22rem 0.85rem; white-space: nowrap;">Identidad de marca</span>
+        <span style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 0.8rem; color: #262626; border: 1px solid #262626; border-radius: 100px; padding: 0.22rem 0.85rem; white-space: nowrap;">Papelería</span>
+      </div>
+      <p class="page-desc" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.35rem; color: #262626; line-height: 1.1; margin: 0; max-width: 42vw;">Seguros que se sienten como un amigo. Capy convierte un rubro usualmente rígido en algo cercano y comprensible — una mascota que hace que todo sea menos intimidante y mucho más humano.</p>
+    </div>
+
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="gallery-section" style="padding: 5vw 3vw 6vw 3vw; display: flex; flex-direction: column; gap: 0.6vw;">
+
+    <!-- Fila 1: 2 imágenes cuadradas -->
+    <div class="gallery-row-two" style="display: flex; gap: 0.6vw;">
+      <img src="img/PROYECTOS/CAPY/Recurso 1.png" alt="Capy Insurance" style="flex: 1; width: 0; aspect-ratio: 1/1; object-fit: cover; display: block; border-radius: 0.8vw;">
+      <img src="img/PROYECTOS/CAPY/Recurso 2.png" alt="Capy Insurance" style="flex: 1; width: 0; aspect-ratio: 1/1; object-fit: cover; display: block; border-radius: 0.8vw;">
+    </div>
+
+    <!-- Fila 2: imagen full width -->
+    <div>
+      <img src="img/PROYECTOS/CAPY/Recurso 3.png" alt="Capy Insurance" style="width: 100%; height: auto; display: block; border-radius: 0.8vw;">
+    </div>
+
+    <!-- Fila 3: Recurso 4 + Recurso 5 -->
+    <div class="gallery-row-two" style="display: flex; gap: 0.6vw; height: 44vw;">
+      <img src="img/PROYECTOS/CAPY/Recurso 4.png" alt="Capy Insurance" style="flex: 1; width: 0; object-fit: cover; display: block; border-radius: 0.8vw;">
+      <img src="img/PROYECTOS/CAPY/Recurso 5.png" alt="Capy Insurance" style="flex: 1; width: 0; object-fit: cover; display: block; border-radius: 0.8vw;">
+    </div>
+
+  </section>
+
+  <!-- BOTÓN SIGUIENTE PROYECTO -->
+  <div style="display: flex; justify-content: center; padding: 2vw 0 8vw 0;">
+    <a href="#" class="btn-sig" style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: 20vw; height: 5.5vw; text-decoration: none; cursor: pointer;">
+      <svg style="position:absolute; top:0; left:0; width:100%; height:100%;" viewBox="0 0 280 80" fill="none" preserveAspectRatio="none">
+        <ellipse cx="140" cy="40" rx="134" ry="36"
+                 stroke="#c73f3f" stroke-width="2.5"
+                 stroke-dasharray="2.5 10" stroke-linecap="round"/>
+      </svg>
+      <span style="font-family: 'BehindTheNineties', serif; font-size: 1.45rem; color: #262626; font-weight: 400; font-style: normal; position: relative;">Siguiente proyecto</span>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-wrap" style="background: #fcc302; padding: 5vw 0 5vw 7vw;">
+    <div class="footer-inner" style="display: flex; gap: 6vw; align-items: flex-start;">
+      <div style="display: flex; flex-direction: column; gap: 0.5vw;">
+        <a href="https://www.linkedin.com/in/orianna-zambrano/" target="_blank" rel="noopener" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none;">Linkdln</a>
+        <a href="https://www.instagram.com/conlaori/" target="_blank" rel="noopener" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none;">Instagram</a>
+        <a href="https://www.tiktok.com/@conlaori" target="_blank" rel="noopener" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none;">Tik Tok</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 0.5vw;">
+        <a href="proyectos.html" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none;">Proyectos</a>
+        <a href="sobre-mi.html" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none;">Sobre mí</a>
+      </div>
+      <div>
+        <a href="contacto.html" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none;">Hablemos</a>
+      </div>
+    </div>
+  </footer>
+  <script src="responsive.js"></script>
+
+</body>
+</html>

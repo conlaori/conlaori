@@ -1,0 +1,241 @@
+/* ====================================================
+   RESPONSIVE.CSS — Orianna Portfolio
+   Breakpoint móvil: ≤ 768px
+   ==================================================== */
+
+/* ── HAMBURGER BUTTON (oculto en desktop) ── */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  z-index: 200;
+  flex-shrink: 0;
+}
+.nav-burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #262626;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-burger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* ── MENÚ MÓVIL OVERLAY (oculto por defecto) ── */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #f8f6e9;
+  z-index: 99;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: 'AlteHaasGrotesk', sans-serif;
+  font-size: 2rem;
+  color: #262626;
+  text-decoration: none;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+.mobile-menu a:hover { opacity: 0.5; }
+.mobile-menu a.nav-active {
+  font-family: 'BehindTheNineties', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+/* ════════════════════════════════════════
+   MÓVIL  (≤ 768px)
+   ════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── NAV ── */
+  .nav-links { display: none !important; }
+  .nav-burger { display: flex !important; }
+  nav { padding: 1.2rem 1.5rem !important; }
+
+  /* ── FOOTER ── */
+  .footer-wrap { padding: 2rem 1.5rem 2.5rem !important; }
+  .footer-inner {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  .footer-inner > div { gap: 0.6rem !important; }
+
+  /* ═══════════════════════════
+     HERO-PREVIEW.HTML
+     ═══════════════════════════ */
+
+  /* Hero principal — de absoluto a flex columna */
+  #hero-section {
+    height: auto !important;
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 6rem 1.5rem 3rem !important;
+    overflow: visible !important;
+    gap: 1rem;
+  }
+
+  #hero-star   { display: none !important; }
+  #hero-zigzag { display: none !important; }
+
+  #hero-foto {
+    position: relative !important;
+    left: auto !important; top: auto !important;
+    width: 82vw !important;
+    order: -1;
+  }
+  #hero-hola {
+    position: relative !important;
+    left: auto !important; top: auto !important;
+    white-space: normal !important;
+  }
+  #hero-hola span { font-size: 13vw !important; }
+
+  #hero-disenyo {
+    position: relative !important;
+    left: auto !important; top: auto !important;
+    white-space: normal !important;
+  }
+  #hero-disenyo span { font-size: 10vw !important; letter-spacing: -0.06em !important; }
+
+  #hero-historia {
+    position: relative !important;
+    left: auto !important; top: auto !important;
+    white-space: normal !important;
+  }
+  #hero-historia span { font-size: 13vw !important; }
+
+  /* Proyectos flotantes → columna vertical */
+  #proyectos {
+    height: auto !important;
+    overflow: visible !important;
+    padding: 3rem 1.5rem 1rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 3rem !important;
+  }
+  #proyectos .proj-card {
+    position: relative !important;
+    left: auto !important; top: auto !important;
+    animation: none !important;
+    width: 88vw !important;
+    display: block !important;
+  }
+  #proyectos .proj-card img { width: 100% !important; }
+  #proyectos .proj-card span { font-size: 1.2rem !important; }
+
+  /* Servicios */
+  #servicios {
+    padding: 2rem 1.5rem 2rem !important;
+  }
+  .serv-title  { font-size: 14vw !important; margin-bottom: 0.8rem !important; }
+  .serv-intro  { font-size: 1rem !important; max-width: 100% !important; margin-bottom: 1.5rem !important; }
+  .serv-header { padding: 1rem 0.5rem 1rem 0 !important; }
+  .serv-header > span { font-size: 4.8vw !important; }
+  .sarrow { height: 3.5vw !important; }
+  .serv-body p {
+    font-size: 0.95rem !important;
+    max-width: 100% !important;
+    padding-right: 0.5rem !important;
+  }
+
+  /* Botones elipse (Hablemos / Siguiente proyecto) */
+  .btn-hablemos,
+  .btn-sig {
+    width: 62vw !important;
+    height: 17vw !important;
+  }
+
+
+  /* ═══════════════════════════
+     PROYECTOS.HTML
+     ═══════════════════════════ */
+
+  #proyectos-intro {
+    height: auto !important;
+    flex-direction: column !important;
+    padding: 6rem 1.5rem 2rem !important;
+    gap: 1.2rem;
+    align-items: flex-start !important;
+    min-width: 0 !important;
+  }
+  #proyectos-intro > div { min-width: 0 !important; }
+  #proyectos-intro h1 { font-size: 16vw !important; }
+  #proyectos-intro p  { font-size: 1rem !important; max-width: 100% !important; }
+
+  #proyectos-grid-section { padding: 0.5rem 1rem 3rem !important; }
+  #proyectos-grid { grid-template-columns: 1fr !important; gap: 0.8rem !important; }
+
+
+  /* ═══════════════════════════
+     PÁGINAS DE PROYECTO
+     (krocante, jude, kubox, capy, tutis)
+     ═══════════════════════════ */
+
+  .page-header {
+    flex-direction: column !important;
+    padding: 6rem 1.5rem 2rem !important;
+    height: auto !important;
+    margin-top: 0 !important;
+    gap: 1.5rem !important;
+  }
+  .page-header-title { min-width: 0 !important; flex-shrink: 1 !important; }
+  .page-header h1   { font-size: 16vw !important; }
+  .page-desc        { font-size: 1rem !important; max-width: 100% !important; }
+
+  .gallery-section  { padding: 0.5rem 0.8rem 3rem !important; gap: 0.5rem !important; }
+
+  .gallery-row-two {
+    flex-direction: column !important;
+    height: auto !important;
+    gap: 0.5rem !important;
+  }
+  .gallery-row-two img {
+    width: 100% !important;
+    height: auto !important;
+    flex: none !important;
+  }
+
+
+  /* ═══════════════════════════
+     CONTACTO.HTML
+     ═══════════════════════════ */
+
+  #contacto-section {
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+  #contacto-dots     { display: none !important; }
+  #contacto-telefono { display: none !important; }
+  #contacto-form-container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    padding-top: 6.5rem !important;
+    padding-bottom: 4rem !important;
+    min-height: 0 !important;
+    display: block !important;
+  }
+  #contacto-form-container h1     { font-size: 15vw !important; }
+  #contacto-form-container .form-group label { font-size: 1rem !important; }
+
+}

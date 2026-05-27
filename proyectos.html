@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos — Orianna</title>
+  <link rel="icon" type="image/png" href="RECURSOS/FAVICON/Recurso 39.png">
+  <link rel="stylesheet" href="responsive.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @font-face {
+      font-family: 'AlteHaasGrotesk';
+      src: url('RECURSOS/fonts/alte_haas_grotesk/AlteHaasGroteskRegular.ttf') format('truetype');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'AlteHaasGrotesk';
+      src: url('RECURSOS/fonts/alte_haas_grotesk/AlteHaasGroteskBold.ttf') format('truetype');
+      font-weight: 700; font-style: normal;
+    }
+    @font-face {
+      font-family: 'BehindTheNineties';
+      src: url('RECURSOS/fonts/behind-the-nineties-90s-80s-perfectly-retro-2024-12-16-06-34-55-utc/TTF/UPRIGHT/Behind-The-Nineties-Rg.ttf') format('truetype');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'BehindTheNineties';
+      src: url('RECURSOS/fonts/behind-the-nineties-90s-80s-perfectly-retro-2024-12-16-06-34-55-utc/TTF/ITALIC/Behind-The-Nineties-It.ttf') format('truetype');
+      font-weight: 400; font-style: italic;
+    }
+    nav a:hover  { opacity: 0.5; }
+    footer a     { letter-spacing: -0.04em; }
+    footer a:hover { opacity: 0.5; }
+    .proj-img {
+      width: 100%; height: auto; display: block;
+      border-radius: 0.8vw;
+      transition: transform 0.45s ease;
+    }
+    .proj-item:hover .proj-img { transform: scale(1.02); }
+    .proj-item { overflow: hidden; border-radius: 0.8vw; }
+  </style>
+</head>
+<body style="background-color: #f8f6e9; margin: 0; padding: 0; overflow-x: hidden; cursor: url('cursor.png'), auto;">
+
+  <!-- NAV -->
+  <nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.5rem 2.75rem; display: flex; align-items: center; justify-content: space-between; background-color: #f8f6e9;">
+    <a href="index.html">
+      <img src="RECURSOS/img/icono-rojo.png" alt="Orianna" style="height: 2.8rem; width: auto;">
+    </a>
+    <div class="nav-links" style="display: flex; align-items: center; gap: 2.75rem;">
+      <a href="proyectos.html" style="font-family: 'BehindTheNineties', serif; font-size: 1.125rem; font-style: italic; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Proyectos</a>
+      <a href="sobre-mi.html"  style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.125rem; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Sobre mí</a>
+      <a href="contacto.html"  style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.125rem; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Hablemos</a>
+    </div>
+    <button class="nav-burger" aria-label="Menú" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="proyectos.html" class="nav-active">Proyectos</a>
+    <a href="sobre-mi.html">Sobre mí</a>
+    <a href="contacto.html">Hablemos</a>
+  </div>
+
+  <!-- PROYECTOS INTRO -->
+  <section id="proyectos-intro" style="position: relative; background: #f8f6e9; height: 22vw; display: flex; align-items: center; padding-left: 20vw; overflow: hidden; margin-top: 5rem;">
+    <div style="min-width: 28vw; flex-shrink: 0;">
+      <h1 style="font-family: 'BehindTheNineties', serif; font-size: 5vw; font-weight: 400; font-style: normal; color: #262626; margin: 0; line-height: 1;">Proyectos</h1>
+    </div>
+    <p style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.35rem; color: #262626; line-height: 1.1; margin: 0; max-width: 42vw;">Cada proyecto que llega a mis manos trae consigo una historia. Esta selección reúne los trabajos que más me han retado y me han hecho sentir esa chispa, marcas con algo real que contar, en las que puse todo mi criterio creativo para ayudarlas a encontrar su voz.</p>
+  </section>
+
+  <!-- PROYECTOS GRID -->
+  <section id="proyectos-grid-section" style="background: #f8f6e9; padding: 2vw 7vw 8vw 7vw;">
+    <div id="proyectos-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2vw;">
+
+      <!-- Krocante -->
+      <div class="proj-item">
+        <a href="krocante.html" style="display: block;">
+          <img src="img/PROYECTOS/S-PROYECTOS/Recurso 37.png" alt="Krocante" class="proj-img">
+        </a>
+      </div>
+
+      <!-- Capy Insurance -->
+      <div class="proj-item">
+        <a href="capy.html" style="display: block;">
+          <img src="img/PROYECTOS/S-PROYECTOS/Recurso 36.png" alt="Capy Insurance" class="proj-img">
+        </a>
+      </div>
+
+      <!-- Tutis Dulces -->
+      <div class="proj-item">
+        <a href="tutis.html" style="display: block;">
+          <img src="img/PROYECTOS/S-PROYECTOS/Recurso 34.png" alt="Tutis Dulces" class="proj-img">
+        </a>
+      </div>
+
+      <!-- Kubox -->
+      <div class="proj-item">
+        <a href="kubox.html" style="display: block;">
+          <img src="img/PROYECTOS/S-PROYECTOS/Recurso 35.png" alt="Kubox" class="proj-img">
+        </a>
+      </div>
+
+      <!-- JUDE — ancho completo -->
+      <div class="proj-item" style="grid-column: 1 / -1;">
+        <a href="jude.html" style="display: block;">
+          <img src="img/PROYECTOS/S-PROYECTOS/Recurso 33.png" alt="JUDE" class="proj-img">
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTÓN HABLEMOS -->
+  <div style="background: #f8f6e9; display: flex; justify-content: center; padding: 5vw 0 11vw 0;">
+    <a href="contacto.html" class="btn-hablemos" style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: 18vw; height: 5.5vw; text-decoration: none; cursor: pointer; transition: transform 0.35s ease;">
+      <svg style="position:absolute; top:0; left:0; width:100%; height:100%;" viewBox="0 0 260 80" fill="none" preserveAspectRatio="none">
+        <ellipse cx="130" cy="40" rx="124" ry="36" stroke="#c73f3f" stroke-width="2.5" stroke-dasharray="2.5 10" stroke-linecap="round"/>
+      </svg>
+      <span style="font-family: 'BehindTheNineties', serif; font-size: 1.45rem; color: #262626; font-weight: 400; font-style: normal; position: relative;">Hablemos</span>
+    </a>
+  </div>
+
+  <style>
+    .btn-hablemos:hover { transform: scale(1.04); }
+  </style>
+
+  <!-- FOOTER -->
+  <footer class="footer-wrap" style="background: #fcc302; padding: 5vw 0 5vw 7vw;">
+    <div class="footer-inner" style="display: flex; gap: 6vw; align-items: flex-start;">
+      <div style="display: flex; flex-direction: column; gap: 0.5vw;">
+        <a href="https://www.linkedin.com/in/orianna-zambrano/" target="_blank" rel="noopener" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Linkdln</a>
+        <a href="https://www.instagram.com/conlaori/"           target="_blank" rel="noopener" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Instagram</a>
+        <a href="https://www.tiktok.com/@conlaori"              target="_blank" rel="noopener" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Tik Tok</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 0.5vw;">
+        <a href="proyectos.html" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Proyectos</a>
+        <a href="sobre-mi.html"  style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Sobre mí</a>
+      </div>
+      <div>
+        <a href="contacto.html" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Hablemos</a>
+      </div>
+    </div>
+  </footer>
+  <script src="responsive.js"></script>
+
+</body>
+</html>
