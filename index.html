@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orianna</title>
+  <link rel="icon" type="image/png" href="RECURSOS/FAVICON/Recurso 39.png">
+  <link rel="stylesheet" href="responsive.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+
+    /* ── FUENTES ── */
+    @font-face {
+      font-family: 'AlteHaasGrotesk';
+      src: url('RECURSOS/fonts/alte_haas_grotesk/AlteHaasGroteskRegular.ttf') format('truetype');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'AlteHaasGrotesk';
+      src: url('RECURSOS/fonts/alte_haas_grotesk/AlteHaasGroteskBold.ttf') format('truetype');
+      font-weight: 700; font-style: normal;
+    }
+    @font-face {
+      font-family: 'BehindTheNineties';
+      src: url('RECURSOS/fonts/behind-the-nineties-90s-80s-perfectly-retro-2024-12-16-06-34-55-utc/TTF/UPRIGHT/Behind-The-Nineties-Rg.ttf') format('truetype');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'BehindTheNineties';
+      src: url('RECURSOS/fonts/behind-the-nineties-90s-80s-perfectly-retro-2024-12-16-06-34-55-utc/TTF/ITALIC/Behind-The-Nineties-It.ttf') format('truetype');
+      font-weight: 400; font-style: italic;
+    }
+
+    /* ── VELOCIDAD GLOBAL DE ANIMATE.CSS ── */
+    .animate__animated { --animate-duration: 0.75s; }
+
+    /* ── ESTRELLA hover — en el img, no en el wrapper ── */
+    .star-img { transition: transform 0.45s cubic-bezier(.34,1.56,.64,1); cursor: pointer; display: block; width: 100%; height: auto; }
+    .star-img:hover { transform: rotate(30deg) scale(1.18); }
+
+    /* ── FOTO hover ── */
+    .photo-wrap { display: inline-block; }
+    .photo-wrap img { transition: transform 0.55s ease; display: block; }
+    .photo-wrap:hover img { transform: scale(1.06); }
+
+  </style>
+</head>
+<body style="background-color: #f8f6e9; margin: 0; padding: 0; overflow-x: hidden; cursor: url('cursor.png'), auto;">
+
+  <!-- NAV -->
+  <nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.5rem 2.75rem; display: flex; align-items: center; justify-content: space-between; background-color: #f8f6e9;">
+    <a href="#">
+      <img src="RECURSOS/img/icono-rojo.png" alt="Orianna" style="height: 2.8rem; width: auto;">
+    </a>
+    <div class="nav-links" style="display: flex; align-items: center; gap: 2.75rem;">
+      <a href="proyectos.html" class="hover:opacity-50 transition-opacity" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.125rem; color: #262626; text-decoration: none; font-weight: 400;">Proyectos</a>
+      <a href="sobre-mi.html" class="hover:opacity-50 transition-opacity" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.125rem; color: #262626; text-decoration: none; font-weight: 400;">Sobre mí</a>
+      <a href="contacto.html" class="hover:opacity-50 transition-opacity" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.125rem; color: #262626; text-decoration: none; font-weight: 400;">Hablemos</a>
+    </div>
+    <button class="nav-burger" aria-label="Menú" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="proyectos.html">Proyectos</a>
+    <a href="sobre-mi.html">Sobre mí</a>
+    <a href="contacto.html">Hablemos</a>
+  </div>
+
+  <!-- HERO — base Figma 1440×800px, todas las posiciones en vw (px/1440*100) -->
+  <section id="hero-section" style="position: relative; height: 55.56vw; min-height: 100vh; background: #f8f6e9; overflow: hidden;">
+
+    <!-- Estrella — wrapper con fadeIn (solo opacidad, sin transform), img con hover rotate -->
+    <div id="hero-star" class="animate__animated animate__fadeIn" style="position: absolute; left: 24.44vw; top: 34vw; width: 20.76vw; z-index: 0; animation-delay: 0.5s;">
+      <img src="RECURSOS/img/star-ama.png" alt="" class="star-img">
+    </div>
+
+    <!-- "Hola, soy Ori" -->
+    <div id="hero-hola" class="animate__animated animate__fadeInUp" style="position: absolute; left: 25.07vw; top: 25.76vw; white-space: nowrap; line-height: 1; z-index: 1; animation-delay: 0.1s;">
+      <span style="font-family: 'BehindTheNineties', serif; font-size: 6.67vw; color: #262626; font-weight: 400; font-style: normal;">Hola, </span><span style="font-family: 'BehindTheNineties', serif; font-size: 6.67vw; color: #262626; font-weight: 400; font-style: italic;">soy Ori</span>
+    </div>
+
+    <!-- "diseño marcas con" -->
+    <div id="hero-disenyo" class="animate__animated animate__fadeInUp" style="position: absolute; left: 15.35vw; top: 32.36vw; white-space: nowrap; line-height: 1; z-index: 1; animation-delay: 0.3s;">
+      <span style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 6.67vw; color: #262626; font-weight: 700; letter-spacing: -0.104em;">diseño marcas con</span>
+    </div>
+
+    <!-- "historia real." -->
+    <div id="hero-historia" class="animate__animated animate__fadeInUp" style="position: absolute; left: 46.39vw; top: 39.65vw; white-space: nowrap; line-height: 1; z-index: 1; animation-delay: 0.7s;">
+      <span style="font-family: 'BehindTheNineties', serif; font-size: 6.67vw; color: #262626; font-style: italic; font-weight: 400;">historia real.</span>
+    </div>
+
+    <!-- Foto -->
+    <div id="hero-foto" class="photo-wrap" style="position: absolute; left: 58.47vw; top: 17.15vw; z-index: 1;">
+      <img src="RECURSOS/img/MI FOTO CON LINEA.png" alt="Orianna" style="width: 29.44vw; height: auto;">
+    </div>
+
+    <!-- Zigzag — entra desde la derecha con fadeInRight -->
+    <img id="hero-zigzag" src="RECURSOS/img/zig-zag.png" alt="" class="animate__animated animate__fadeInRight" style="position: absolute; left: 70.97vw; top: 48vw; width: 15.63vw; animation-delay: 0.9s; animation-fill-mode: both;">
+
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" style="position: relative; height: 112vw; background: #f8f6e9; overflow: hidden;">
+
+    <!-- JUDE -->
+    <a href="jude.html" class="proj-card" style="position: absolute; left: 20.25vw; top: 7.22vw; animation: floatA 4.5s ease-in-out infinite; text-decoration: none; display: block;">
+      <img src="img/PROYECTOS/JUDE.png" alt="JUDE"
+           style="width: 33.8vw; height: auto; border-radius: 0.5vw; display: block;">
+      <span style="font-family: 'BehindTheNineties', serif; font-size: 1.2rem; color: #262626; font-weight: 400; font-style: normal; display: block; margin-top: 1.2vw;">JUDE</span>
+    </a>
+
+    <!-- Krocante -->
+    <a href="krocante.html" class="proj-card" style="position: absolute; left: 62.28vw; top: 9.24vw; animation: floatB 5.2s ease-in-out infinite; animation-delay: -1.5s; text-decoration: none; display: block;">
+      <img src="img/PROYECTOS/KROCANTE.png" alt="Krocante"
+           style="width: 26.33vw; height: auto; border-radius: 0.5vw; display: block;">
+      <span style="font-family: 'BehindTheNineties', serif; font-size: 1.2rem; color: #262626; font-weight: 400; font-style: normal; display: block; margin-top: 1.2vw;">Krocante</span>
+    </a>
+
+    <!-- Kubox -->
+    <a href="kubox.html" class="proj-card" style="position: absolute; left: 10.63vw; top: 38.35vw; animation: floatA 4.8s ease-in-out infinite; animation-delay: -2.8s; text-decoration: none; display: block;">
+      <img src="img/PROYECTOS/KUBOX.png" alt="Kubox"
+           style="width: 30.76vw; height: auto; border-radius: 0.5vw; display: block;">
+      <span style="font-family: 'BehindTheNineties', serif; font-size: 1.2rem; color: #262626; font-weight: 400; font-style: normal; display: block; margin-top: 1.2vw;">Kubox</span>
+    </a>
+
+    <!-- Capy Insurance -->
+    <a href="capy.html" class="proj-card" style="position: absolute; left: 49.11vw; top: 53.42vw; animation: floatB 5.6s ease-in-out infinite; animation-delay: -0.7s; text-decoration: none; display: block;">
+      <img src="img/PROYECTOS/CAPY INSURANCE.png" alt="Capy Insurance"
+           style="width: 32.53vw; height: auto; border-radius: 0.5vw; display: block;">
+      <span style="font-family: 'BehindTheNineties', serif; font-size: 1.2rem; color: #262626; font-weight: 400; font-style: normal; display: block; margin-top: 1.2vw;">Capy Insurance</span>
+    </a>
+
+    <!-- Tutis Dulces -->
+    <a href="tutis.html" class="proj-card" style="position: absolute; left: 34.05vw; top: 83vw; animation: floatA 4.2s ease-in-out infinite; animation-delay: -3.2s; text-decoration: none; display: block;">
+      <img src="img/PROYECTOS/TUTIS DULCES.png" alt="Tutis Dulces"
+           style="width: 32.41vw; height: auto; border-radius: 0.5vw; display: block;">
+      <span style="font-family: 'BehindTheNineties', serif; font-size: 1.2rem; color: #262626; font-weight: 400; font-style: normal; display: block; margin-top: 1.2vw;">Tutis Dulces</span>
+    </a>
+
+  </section>
+
+  <style>
+    @keyframes floatA {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-12px); }
+    }
+    @keyframes floatB {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-9px); }
+    }
+
+    .proj-card img { transition: transform 0.45s ease; }
+    .proj-card:hover img { transform: scale(1.03); }
+  </style>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" style="background: #f8f6e9; padding: 8vw 0 8vw 38.5vw;">
+
+    <!-- Título + intro -->
+    <div style="padding-right: 5vw; margin-bottom: 3.5vw;">
+      <h2 class="serv-title" style="font-family: 'BehindTheNineties', serif; font-weight: 400; font-style: normal; font-size: 5.2vw; color: #262626; margin: 0 0 1.4vw 0; line-height: 1.05;">Servicios</h2>
+      <p class="serv-intro" style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.35rem; color: #262626; line-height: 1.1; margin: 0; max-width: 40vw;">Para las marcas personales y emprendimientos que están comenzando, el mayor reto muchas veces no es tener la idea, es saber cómo darle forma. Aquí es donde entro yo.</p>
+    </div>
+
+    <!-- Items -->
+    <div style="border-top: 1px solid #262626;">
+
+      <!-- 01 -->
+      <div class="serv-item" style="border-bottom: 1px solid #262626;">
+        <div class="serv-header" onclick="toggleServ(this.parentElement)" style="display: flex; align-items: center; justify-content: space-between; padding: 1.3vw 5vw 1.3vw 0; cursor: pointer;">
+          <span style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.9vw; color: #262626; font-weight: 400;">01. Tus primeros pasos,&nbsp;<span style="font-family: 'BehindTheNineties', serif; font-style: italic;">junt@s</span></span>
+          <img src="RECURSOS/img/FLECHA NEGRA.png" class="sarrow" alt="" style="height:1.1vw; width:auto; flex-shrink:0; transition: transform 0.35s ease;">
+        </div>
+        <div class="serv-body" style="max-height:0; overflow:hidden; opacity:0; transform:translateY(-8px);">
+          <p style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.35rem; color: #262626; line-height: 1.1; margin: 0; padding: 0 5vw 1.8vw 0; max-width: 50vw;">No tienes que tenerlo todo claro para empezar. Te acompaño desde el inicio del proceso: escucho, analizo y te ayudo a tomar las primeras decisiones con criterio. Ideal para marcas personales y emprendimientos que saben que quieren algo, pero todavía no saben exactamente qué.</p>
+        </div>
+      </div>
+
+      <!-- 02 -->
+      <div class="serv-item" style="border-bottom: 1px solid #262626;">
+        <div class="serv-header" onclick="toggleServ(this.parentElement)" style="display: flex; align-items: center; justify-content: space-between; padding: 1.3vw 5vw 1.3vw 0; cursor: pointer;">
+          <span style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.9vw; color: #262626;"><span style="font-weight: 700;">02. Identidad</span> de marca</span>
+          <img src="RECURSOS/img/FLECHA NEGRA.png" class="sarrow" alt="" style="height:1.1vw; width:auto; flex-shrink:0; transition: transform 0.35s ease;">
+        </div>
+        <div class="serv-body" style="max-height:0; overflow:hidden; opacity:0; transform:translateY(-8px);">
+          <p style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.35rem; color: #262626; line-height: 1.1; margin: 0; padding: 0 5vw 1.8vw 0; max-width: 50vw;">Creo identidades que cuentan algo real. Cada proyecto tiene su propia coherencia, colores, tipografía y forma que no siguen tendencias, sino que construyen una presencia duradera y auténtica.</p>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="serv-item" style="border-bottom: 1px solid #262626;">
+        <div class="serv-header" onclick="toggleServ(this.parentElement)" style="display: flex; align-items: center; justify-content: space-between; padding: 1.3vw 5vw 1.3vw 0; cursor: pointer;">
+          <span style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.9vw; color: #262626; font-weight: 400;">03. Papelería y&nbsp;<span style="font-family: 'BehindTheNineties', serif; font-style: italic;">cartelería</span></span>
+          <img src="RECURSOS/img/FLECHA NEGRA.png" class="sarrow" alt="" style="height:1.1vw; width:auto; flex-shrink:0; transition: transform 0.35s ease;">
+        </div>
+        <div class="serv-body" style="max-height:0; overflow:hidden; opacity:0; transform:translateY(-8px);">
+          <p style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.35rem; color: #262626; line-height: 1.1; margin: 0; padding: 0 5vw 1.8vw 0; max-width: 50vw;">Todo lo que hace que tu marca exista más allá de la pantalla. Tarjetas, etiquetas, empaques, carteles, catálogos, cada pieza diseñada para que la identidad se mantenga coherente en el mundo real.</p>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="serv-item" style="border-bottom: 1px solid #262626;">
+        <div class="serv-header" onclick="toggleServ(this.parentElement)" style="display: flex; align-items: center; justify-content: space-between; padding: 1.3vw 5vw 1.3vw 0; cursor: pointer;">
+          <span style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.9vw; color: #262626;"><span style="font-weight: 700;">04. Diseño</span> para redes</span>
+          <img src="RECURSOS/img/FLECHA NEGRA.png" class="sarrow" alt="" style="height:1.1vw; width:auto; flex-shrink:0; transition: transform 0.35s ease;">
+        </div>
+        <div class="serv-body" style="max-height:0; overflow:hidden; opacity:0; transform:translateY(-8px);">
+          <p style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.35rem; color: #262626; line-height: 1.1; margin: 0; padding: 0 5vw 1.8vw 0; max-width: 50vw;">Diseño piezas para redes que se ven como tu marca y no como cualquier otra. Posts, stories, highlights, contenido visual coherente para que tu presencia digital tenga el mismo nivel que tu identidad.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTÓN HABLEMOS -->
+  <div style="background: #f8f6e9; display: flex; justify-content: center; padding: 5vw 0 11vw 0;">
+    <a href="contacto.html" class="btn-hablemos" style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: 18vw; height: 5.5vw; text-decoration: none; cursor: pointer; transition: transform 0.35s ease;">
+      <svg style="position:absolute; top:0; left:0; width:100%; height:100%;" viewBox="0 0 260 80" fill="none" preserveAspectRatio="none">
+        <ellipse cx="130" cy="40" rx="124" ry="36"
+                 stroke="#c73f3f" stroke-width="2.5"
+                 stroke-dasharray="2.5 10" stroke-linecap="round"/>
+      </svg>
+      <span style="font-family: 'BehindTheNineties', serif; font-size: 1.45rem; color: #262626; font-weight: 400; font-style: normal; position: relative;">Hablemos</span>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-wrap" style="background: #fcc302; padding: 5vw 0 5vw 7vw;">
+    <div class="footer-inner" style="display: flex; gap: 6vw; align-items: flex-start;">
+
+      <!-- Redes -->
+      <div style="display: flex; flex-direction: column; gap: 0.5vw;">
+        <a href="https://www.linkedin.com/in/orianna-zambrano/" target="_blank" rel="noopener"
+           style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Linkdln</a>
+        <a href="https://www.instagram.com/conlaori/" target="_blank" rel="noopener"
+           style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Instagram</a>
+        <a href="https://www.tiktok.com/@conlaori" target="_blank" rel="noopener"
+           style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Tik Tok</a>
+      </div>
+
+      <!-- Nav -->
+      <div style="display: flex; flex-direction: column; gap: 0.5vw;">
+        <a href="proyectos.html"
+           style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Proyectos</a>
+        <a href="sobre-mi.html"
+           style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Sobre mí</a>
+      </div>
+
+      <!-- Contacto -->
+      <div>
+        <a href="contacto.html"
+           style="font-family: 'AlteHaasGrotesk', sans-serif; font-size: 1.2rem; color: #262626; text-decoration: none; font-weight: 400; transition: opacity 0.2s ease;">Hablemos</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <style>
+    footer a { letter-spacing: -0.04em; }
+    footer a:hover { opacity: 0.5; }
+    .btn-hablemos:hover { transform: scale(1.04); }
+    .serv-body {
+      transition: max-height 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                  opacity 0.4s ease,
+                  transform 0.4s ease;
+    }
+    .serv-header:hover .sarrow { transform: translateX(5px); }
+    .serv-item.open .sarrow { transform: rotate(90deg); }
+  </style>
+
+  <script src="responsive.js"></script>
+  <script>
+    function toggleServ(item) {
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.serv-item').forEach(function(i) {
+        i.classList.remove('open');
+        var b = i.querySelector('.serv-body');
+        b.style.maxHeight = '0';
+        b.style.opacity = '0';
+        b.style.transform = 'translateY(-8px)';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        var b = item.querySelector('.serv-body');
+        b.style.maxHeight = b.scrollHeight + 'px';
+        b.style.opacity = '1';
+        b.style.transform = 'translateY(0)';
+      }
+    }
+  </script>
+
+</body>
+</html>
